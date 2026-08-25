@@ -62,3 +62,66 @@ let pausa = 10
 for numero in stride(from: 0, to: 100, by: pausa) {
     print(numero)
 }
+
+//While Loops
+
+"""
+    O loop While executa um conjunto de instruçôes até que uma condição se torne falsa. 
+    É o tipo de loop mais adequado o número de iterações
+
+    Tem dois tipos de Whles: While e o Repeat-while
+
+"""
+
+// esqueleto do While
+"""
+
+    while condicao {
+        instruçoes a serem feias
+    }
+
+"""
+
+// while
+var year = 0
+let majority = 18
+let name = "Maria"
+
+while year < majority {
+    year += 1
+    
+    if year == 12 {
+        print("\(name) atingiu a adolescência")
+    }
+    else if year < 12{
+        print("\(name) ainda não atingiu a adolescência")
+    }
+    else {
+        print("\(name) agora está a caminho da maioridade")
+    }
+}
+
+print("\(name) atingiu a maioridade")
+
+// repeat-while
+"""
+    o repeat-while primeiro execta o bloco de instruções pra depois testar se a condição é falsa pra poder parar. Se a confição for verfadeira, ai ele volta a executar o bloco de instruções
+"""
+// esqueleto
+
+"""
+
+    repeat {
+        conjunto de instruções
+    } while condicaco
+
+"""
+var seguro = ""
+repeat {
+    print("Estude Estrutura de Dados enquanto não tiver aprendido")
+    print("Já está seguro?")
+    if let entrada = readLine(){
+        seguro = entrada
+    }
+    
+} while seguro != "sim"
