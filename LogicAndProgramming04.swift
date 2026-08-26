@@ -116,12 +116,65 @@ print("\(name) atingiu a maioridade")
     } while condicaco
 
 """
-var seguro = ""
-repeat {
-    print("Estude Estrutura de Dados enquanto não tiver aprendido")
-    print("Já está seguro?")
-    if let entrada = readLine(){
-        seguro = entrada
+//var seguro = ""
+//repeat {
+//    print("Estude Estrutura de Dados enquanto não tiver aprendido")
+//    print("Já está seguro?")
+//    if let entrada = readLine(){
+//        seguro = entrada
+//    }
+//    
+//} while seguro != "sim"
+
+
+// if
+"""
+    o if executa condições se a condicão que eu coloquei for verdadeira
+"""
+
+// esqueleto do if
+"""
+
+    if condicao {
+        instruções a serem feitas
     }
+"""
+
+let name2 = "Junior"
+
+if name2 == "José" {
     
-} while seguro != "sim"
+    print("Seu nome é José")
+    
+} else if name2 == "Maria" {
+    print("Seu nome é Maria")
+} else if name2 == "Carlos" {
+    print("Seu nome é Carlos")
+} else {
+    print("Não reconhecemos seu nome")
+}
+
+// eu posso ter o else, como uma alternativa de instruções a serem feitas, caso a condição do meu if não seja verdadeira. Quando ela é falsa, ele simplesmente sai do laço e encerra o programa
+
+// eu posso ter vários if's e não somente a binariedade de if e else. Para esses outros if's, do segundo em diante, eu utilizo o "else if"
+
+
+// eu posso atribuir a uma constante/variável um bloco de if
+
+let idade2 = 12
+let fraseRestricao = if idade2 < 18 {
+    "Você não pode consumir álcool"
+} else {
+    "Você pode consumir álcool"
+}
+print(fraseRestricao)
+
+// eu preciso fazer a annotation se dentro de alguma clausula tem nil
+let idade3 = 24
+let nome3: String? = if idade3 < 24 {
+    
+    "Renata"
+} else {
+    nil
+}
+print(nome3)
