@@ -116,15 +116,15 @@ print("\(name) atingiu a maioridade")
     } while condicaco
 
 """
-//var seguro = ""
-//repeat {
-//    print("Estude Estrutura de Dados enquanto não tiver aprendido")
-//    print("Já está seguro?")
-//    if let entrada = readLine(){
-//        seguro = entrada
-//    }
-//    
-//} while seguro != "sim"
+var seguro = ""
+repeat {
+    print("Estude Estrutura de Dados enquanto não tiver aprendido")
+    print("Já está seguro?")
+    if let entrada = readLine(){
+        seguro = entrada
+    }
+    
+} while seguro != "sim"
 
 
 // if
@@ -178,3 +178,66 @@ let nome3: String? = if idade3 < 24 {
     nil
 }
 print(nome3)
+
+
+// posso fazer a seguinte coisa com o nil, mas a maneira anterior é melhor prática, tanto para se manter um código
+// com mais facilidade, quanto pra clareza
+
+let idade4 = 34
+let nome4 = if idade4 < 34 {
+    "Renan"
+}
+else {
+    nil as String?
+}
+print(nome4)
+
+// Switch
+
+"""
+O Switch analisa um valor e procura correspondência para ele nas opções/cases existentes. 
+Ele executa o bloco de código pré-estabelecido para aquele case que der match, 
+e para automaticamente — sem precisar de break. Se eu quiser que ele continue pro próximo case mesmo assim, 
+preciso usar a palavra-chave fallthrough
+"""
+
+//esqueleto do switch
+"""
+
+    switch valor {
+        case valor1:
+            instruções
+        case valor2:
+            instruções
+        deafult:
+            qualuqer outra instrução
+    }
+"""
+
+let fruta: String = "banana"
+switch fruta {
+    case "maça":
+        print("Coma maçã")
+    case "uva":
+        print("Coma uva")
+    case "banana":
+        print("Coma banana")
+    default:
+        print("Não coma nada, pois não conhecemos essa fruta")
+    
+}
+
+let name3: String = "ariana"
+let fraseSaudacao = switch name3 {
+    case "mariana":
+        "Olá! Meu nome é Mariana."
+    case "josé":
+        "Olá! Meu nome é José."
+    case "antônio":
+        "Olá! Meu nome é Antônio."
+    default: 
+        "Não reconhecemos seu nome em nossos registros."
+    
+
+}
+print(fraseSaudacao)
