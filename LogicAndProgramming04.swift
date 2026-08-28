@@ -241,3 +241,42 @@ let fraseSaudacao = switch name3 {
 
 }
 print(fraseSaudacao)
+
+// eu posso fornecer throw ou fatalError em qualquer case (não só no default) 
+// quando não quero/consigo retornar um valor. Isso me libera da obrigação 
+// de todos os cases retornarem o mesmo tipo, mas o case continua contando 
+// pra exaustividade do switch
+
+let idade = 34
+
+let categoria = switch idade {
+    case ..<0:
+        fatalError("Não existe idade negativa")
+    case 0...11:
+        "Criança"
+    case 12...17:
+        "Adolescente"
+    case 18...30:
+        "Jovem"
+    default:
+        "Adulto"
+}
+print(categoria)
+
+// No swift, eu não preciso do break explicito, pois assim que o compilador encontra a correspondência, ele executa esse case e depois sai do switch inteiro
+// todo case do swift deve conter pelo menos uma instrução executável, ou seja, cases não podem ser vazios (afinal, nem faria sentido)
+
+// eu posso ter dois cases juntos, se eles tem a mesma instrução
+
+let alternativa: String = "d"
+switch alternativa {
+    case "a", "A":
+        print("A resposta é letra A")
+    case "b", "B":
+        print("A resposta é letra B")
+    case "c", "C":
+        print("A resposta é letra C")
+    default:
+        print("A resposta não é nenhuma das opções fornecidas")
+            
+}
