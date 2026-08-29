@@ -280,3 +280,22 @@ switch alternativa {
         print("A resposta não é nenhuma das opções fornecidas")
             
 }
+
+// tuplas
+let pontoQuadrante = (0,0)
+
+switch pontoQuadrante {
+    case (0,0):
+        print("Ponto de origem")
+    case (1..., 1...):
+        print("Primeiro quadrante")
+    case (..<0, 1...):
+        print("Segundo quadrante")
+    case (..<0, ..<0):
+        print("Terceiro quadrante")
+    case (1..., ..<0):
+        print("Quarto quadrante")
+    default:
+        print("Intervalo desconhecido")
+    
+}
