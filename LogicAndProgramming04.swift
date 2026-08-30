@@ -299,3 +299,36 @@ switch pontoQuadrante {
         print("Intervalo desconhecido")
     
 }
+
+// switch com where - faz um switch de cases com certas condições ou intervalos
+
+let nota = 34
+
+switch nota {
+    case let n where n >= 90:
+        print("A")
+    case let n where n >= 70:
+        print("B")
+    case let n where n >= 50:
+        print("C")
+    case let n:
+        print("D")
+    
+
+}
+
+// switch com casos compostos - é bem autexplicativo:
+let numero = 2000
+
+switch numero {
+    case 1, 2, 3, 4, 5, 6, 7, 8, 9:
+        print("Unidade")
+    case 10, 20, 30, 40, 50, 60, 70, 80, 90:
+        print("Dezena")
+    case 100, 200, 300, 400, 500, 600, 700, 800, 900:
+        print("Centena")
+    default:
+        print("Até o momento, só conhecemos 3 classes. ")
+    
+
+}
