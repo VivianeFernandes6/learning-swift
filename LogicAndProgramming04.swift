@@ -332,3 +332,13 @@ switch numero {
     
 
 }
+
+// Patterns - esse valor bate com essa forma?
+let ponto = (1, 90)
+
+if case (3, let y) = ponto {
+    print("Ok: \(y)")
+} else {
+    print("NaN")
+}
+
