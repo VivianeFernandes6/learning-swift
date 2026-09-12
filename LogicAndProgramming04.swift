@@ -342,3 +342,18 @@ if case (3, let y) = ponto {
     print("NaN")
 }
 
+// patterns - em um array
+let points = [(1,5), (3,0), (3,2), (7,6)]
+
+for (x,y) in points {
+    if x == 3 {
+        print("cool")
+    } else {
+        print("uncool")
+    }
+}
+
+// for case in
+for case (let x, 6) in points {
+    print("blabla")
+}
