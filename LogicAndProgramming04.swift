@@ -357,3 +357,29 @@ for (x,y) in points {
 for case (let x, 6) in points {
     print("blabla")
 }
+
+// for case in with a where clause
+let brothersAges = [(10, 17), (30, 12), (23, 23), (24, 21)]
+
+for case let (x, y) in brothersAges where x == y {
+    print("The brothers are twins")
+}
+
+// control transfer statement
+// aqui eu tenho a frase completa, original
+let puzzleInput = "great minds think alike"
+// aqui eu vou armazenar a minha frase desejada, manipulada
+var puzzleOutput = ""
+// aqui eu crio uma lista do que eu quero remover: vogais, espaço. essa lista vai ser do tipo Character, uma vez que uma vogal, um espaço é apenas um caractere e não uma string, que é uma cadeia de caracteres
+let charactersToRemove: [Character] = ["a", "e", "i", "o", "u", " "]
+// então para cada item da string puzzleInput
+for character in puzzleInput {
+    // eu vou verificar se esse caractere está na lista de caracterese a serem removidos
+    if charactersToRemove.contains(character) {
+        // se sim, aplico o continue e ele encerra a iteração atual e passa para a próxima iteração do for.
+        continue
+    }
+    // se não, eu adiciono o caractere a minha lista vazia, que vai ser a frase desejada. o Continue, impede que o caractere que der match no if seja appendizado aqui em puzzleOutput
+    puzzleOutput.append(character)
+}
+print(puzzleOutput)
