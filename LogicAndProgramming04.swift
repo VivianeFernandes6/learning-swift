@@ -404,3 +404,23 @@ if let letterSound = possibleSound {
 } else {
     print("The sound couldn't be found for \(letter).")
 }
+
+// Fallthrough
+
+
+let name20 = "Maria"
+
+var description20 = "\(name20) is "
+
+switch name20 {
+    
+    case "Maria":
+        description20 += "sweet"
+        fallthrough // mesmo dando match nesse case, a instrução do próximo case será executada (independente de match ou não)
+    default:
+        description20 += " and also sour"
+    
+    
+}
+
+print(description20)
