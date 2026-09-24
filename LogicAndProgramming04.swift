@@ -424,3 +424,19 @@ switch name20 {
 }
 
 print(description20)
+
+// labeled statements
+let notas = [
+    [7, 8, 9],
+    [6, 0, 5],
+    [10, 9, 8]
+]
+
+buscaDeZero: for (indiceAluno, provasDoAluno) in notas.enumerated() {
+    for (indiceProva, nota) in provasDoAluno.enumerated() {
+        if nota == 0 {
+            print("Zero encontrado: aluno \(indiceAluno), prova \(indiceProva)")
+            break buscaDeZero
+        }
+    }
+}
