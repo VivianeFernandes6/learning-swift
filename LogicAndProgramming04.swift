@@ -440,3 +440,18 @@ buscaDeZero: for (indiceAluno, provasDoAluno) in notas.enumerated() {
         }
     }
 }
+
+// early exit - guard
+func verificarAcesso(idade: Int){
+
+    guard idade >= 18 else {
+        print("Acesso negado")
+        return    
+    } 
+    print("Acesso permitido")
+
+}
+
+verificarAcesso(idade: 90)
+verificarAcesso(idade: 12)
+verificarAcesso(idade: 18)
