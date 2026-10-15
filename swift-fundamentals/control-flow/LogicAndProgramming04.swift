@@ -455,3 +455,20 @@ func verificarAcesso(idade: Int){
 verificarAcesso(idade: 90)
 verificarAcesso(idade: 12)
 verificarAcesso(idade: 18)
+
+// deferred actions
+
+var score = 500
+
+do {
+    score += 100
+
+    defer {
+        score -= 100
+    }
+
+    print("Pontuação temporária: \(score)")
+}
+
+print("Pontuação final: \(score)")
+
