@@ -472,3 +472,16 @@ do {
 
 print("Pontuação final: \(score)")
 
+// checking API availability
+func usarRecurso() {
+    // o guard verifica um requisito para que a execução continue
+    // requisito - verifica se o dispositivo está executando iOS 18 ou posterior
+    guard #available(iOS 18, *) else {
+        return // requisito não atendido - sai da função
+    }
+
+    // Só continua aqui se o iOS 18 ou posterior estiver disponível.
+    print("Usando o recurso")
+}
+
+usarRecurso()
